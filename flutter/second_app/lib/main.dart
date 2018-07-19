@@ -8,8 +8,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
       appBar: AppBar(
-        title: Text('Users List'),
+        title: Text('Cars List'),
       ),
+      body: Card(child: Column(children: <Widget>[
+        Image.asset('assets/car1.jpg'),
+        Text('My Cars')
+      ],),),
     ),
     );
   }
