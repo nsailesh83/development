@@ -4,6 +4,7 @@ import './productContainer.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
+ 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text('Cars List'),
         ),
-        body: ProductContainer(),
+        body: ProductContainer('Car demo tester'),
       ),
     );
   }

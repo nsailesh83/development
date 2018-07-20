@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import './product.dart';
 
 class ProductContainer extends StatefulWidget {
+  final String startingProduct;
+
+  ProductContainer(this.startingProduct);
+
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
@@ -10,7 +14,14 @@ class ProductContainer extends StatefulWidget {
 }
 
 class _ProductContainer extends State<ProductContainer> {
-  List<String> _products = ['Car Driving Test'];
+  List<String> _products = [];
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    _products.add(widget.startingProduct);
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +34,7 @@ class _ProductContainer extends State<ProductContainer> {
             onPressed: () {
               setState(() {
                 _products.add('Demo Test1');
-                // print(_products);    
+                // print(_products);
               });
             },
             child: Text('Add Car'),
